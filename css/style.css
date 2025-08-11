@@ -18,6 +18,34 @@
 }
 }
 
+@media (max-width: 1199.98px) {
+    .info-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+}
+.instagram, .facebook{
+    color:#efd07b;
+}
+
+::selection {
+    background:#EFd07B; /* couleur de fond du surlignage */
+    color: #1a405a;      /* couleur du texte sélectionné */
+}
+
+.info-box {
+    display: flex;
+    align-items: center;    /* centre verticalement logo + icônes */
+    justify-content: center; /* centre horizontalement dans le conteneur */
+    gap: 20px;              /* espace entre logo et icônes */
+}
+.social-links {
+    display: flex;
+    gap: 10px; /* espace entre les icônes */
+}
 
 .portfolio-item img {
   width: 100%;
@@ -276,11 +304,11 @@ p.a {
 /* 3.5 FAQs
 /*----------------------------------------------*/
 .accordion-item{
-    background: var(--bs-yellow);
+    background: var(--bs-beigesable);
   }
   h5 button.accordion-button{
     font-family: var(--body-font);
-    background: var(--bs-yellow);
+    background: var(--bs-beigesable);
   }
   .accordion-button:focus {
     border: none;
