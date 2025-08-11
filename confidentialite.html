@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Atypique</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <!--cdncss link-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/lightbox.min.css">
+
+  <!--style sheet-->
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <!--svg icons-->
+  <svg>
+    <symbol id="menu" viewBox="0 0 24 24">
+      <path
+        d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 12a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m7-7a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2z" />
+    </symbol>
+    <symbol id="art" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette-icon lucide-palette">
+      <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+    </symbol>
+    <symbol id="brush" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path fill="#fff" stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+    </symbol>
+    <symbol id="sparkles" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+    </symbol>
+    <symbol id="CDV" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" />
+    </symbol>
+    <symbol id="poster" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+    </symbol>
+     <symbol id="vehicule" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z" />
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M15.12 5.32H17V2.14A26.11 26.11 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.62H6.61v3.56h3.07V22h3.68v-9.12h3.06l.46-3.56h-3.52V7.05c0-1.05.28-1.73 1.76-1.73" />
+    </symbol>
+  </svg>
+
+  <header id="top" class="position-sticky top-0 start-0" style="z-index:10;">
+    <nav class="navbar bg-white fixed-top">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center g-4">
+          <a class="navbar-brand d-flex" href="index.html">
+            <img src="images/logo_header.png" class="img-fluid" id="logo">
+          </a>
+          
+        <!--
+          
+          <div class="icon px-5">
+            
+            <a href="#" class="text-decoration-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg>
+            </a>
+
+            <a href="#" class="text-decoration-none">
+              <svg class="whatsapp" width="24" height="24">
+                <use xlink:href="#whatsapp"></use>
+              </svg>
+            </a>
+           
+            <a href="#" class="text-decoration-none">
+              <svg class="facebook" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg>
+            </a>
+            <a href="#" class="text-decoration-none">
+              <svg class="messenger" width="24" height="24">
+                <use xlink:href="#messenger"></use>
+              </svg>
+            </a>
+          
+          </div>
+
+        -->
+        </div>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navabar-toggler-icon">
+            <svg class="text-primary menu" width="32" height="32" id="iconemenu">
+              <use xlink:href="#menu" fill=""></use>
+            </svg>
+          </span>
+        </button>
+        <div class="offcanvas offcanvas-end text-white bg-bleunuit" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close ms-3" data-bs-dismiss="offcanvas" aria-label="Close" style="background: none; border: none; padding: 0;">
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                <path d="M18 6L6 18M6 6l12 12" stroke="#EFD07B" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav flex-grow-1 p-4">
+              <li class="nav-item">
+                <a class="nav-link active text-uppercase ls-4 text-white" aria-current="page" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase ls-4 text-white" aria-current="page" href="index.html">Qui suis-je ?
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase ls-4 text-white" aria-current="page" href="index.html">Portfolio 
+                </a>
+              </li>
+              </li>                         
+              <li class="nav-item">
+                <a class="nav-link text-uppercase ls-4 text-white" aria-current="page" href="index.html">Contact 
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="p-5 ">
+    <div class="container">
+        <div class="container">
+            <h1 style="text-align: center;">Politique de Confidentialité – ATYPIQUE</h1>
+
+    <section  style="text-align: center;">
+        <p>
+            Chez <strong>ATYPIQUE</strong>, studio créatif, la protection de vos données personnelles est une priorité. 
+            Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre site web 
+            <a href="https://www.atypique-studio.com" target="_blank" rel="noopener noreferrer">www.atypique-studio.com</a> et nos services.
+        </p>
+        <p>
+            En accédant à notre site ou en utilisant nos services, vous acceptez les conditions décrites dans cette politique.
+        </p>
+    </section>
+
+    <section>
+        <h2 style="text-align: center;">1. Données collectées</h2>
+        <p style="text-align: center;">Nous recueillons les informations suivantes pour mieux répondre à vos besoins :</p>
+        <ul>
+            <li>Vos coordonnées (nom, prénom, adresse e-mail, téléphone) lorsque vous nous contactez ou remplissez un formulaire.</li>
+            <li>Données techniques (adresse IP, type de navigateur, pages consultées) pour analyser et améliorer votre expérience.</li>
+            <li>Données liées aux projets créatifs que vous nous confiez.</li>
+            <li>Cookies pour optimiser la navigation sur notre site.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 style="text-align: center;">2. Utilisation des données</h2>
+        <p style="text-align: center;">Vos données sont utilisées pour :</p>
+        <ul>
+            <li>Communiquer avec vous (réponses à vos demandes, devis, newsletters).</li>
+            <li>Gérer et réaliser vos projets créatifs.</li>
+            <li>Améliorer et personnaliser notre site et nos services.</li>
+            <li>Respecter nos obligations légales et sécuriser notre plateforme.</li>
+        </ul>
+    </section>
+
+    <section style="text-align: center;">
+        <h2 >3. Partage des données</h2>
+        <p>
+            Nous ne partageons pas vos données personnelles avec des tiers à des fins commerciales. 
+            Vos informations peuvent toutefois être transmises à nos prestataires de confiance (hébergement, outils marketing) sous contrat de confidentialité.
+        </p>
+    </section>
+
+    <section>
+        <h2 style="text-align: center;">4. Cookies</h2>
+        <p style="text-align: center;">Notre site utilise des cookies pour :</p>
+        <ul>
+            <li>Analyser l’utilisation du site.</li>
+            <li>Garder en mémoire vos préférences.</li>
+            <li>Vous proposer une expérience adaptée.</li>
+        </ul>
+        <p style="text-align: center;">
+            Vous pouvez désactiver les cookies via les paramètres de votre navigateur, mais cela peut impacter certaines fonctionnalités.
+        </p>
+    </section>
+
+    <section style="text-align: center;">
+        <h2>5. Sécurité</h2>
+        <p>
+            ATYPIQUE s’engage à protéger vos données grâce à des mesures de sécurité adaptées pour éviter tout accès non autorisé ou perte de données.
+        </p>
+    </section>
+
+    <section>
+        <h2 style="text-align: center;">6. Vos droits</h2>
+        <p style="text-align: center;">Conformément à la loi Informatique et Libertés et au RGPD, vous pouvez :</p>
+        <ul>
+            <li>Accéder, rectifier ou supprimer vos données personnelles.</li>
+            <li>Limiter ou vous opposer à leur traitement.</li>
+            <li>Demander la portabilité de vos données.</li>
+            <li>Retirer votre consentement à tout moment.</li>
+        </ul>
+        <p style="text-align: center;">
+            Pour exercer ces droits, contactez-nous à : <a href="mailto:atypique.studiocreatif@gmail.com">atypique.studiocreatif@gmail.com</a>
+        </p>
+    </section>
+
+    <section style="text-align: center;">
+        <h2>7. Conservation des données</h2>
+        <p>
+            Nous conservons vos données uniquement le temps nécessaire à la réalisation des finalités mentionnées et conformément aux exigences légales.
+        </p>
+    </section>
+
+    <section style="text-align: center;">
+        <h2>8. Modifications de la politique</h2>
+        <p>
+            Cette politique peut être mise à jour. La date de la dernière mise à jour est indiquée en haut de la page. Merci de la consulter régulièrement.
+        </p>
+    </section>
+
+    <section style="text-align: center;">
+        <h2>9. Contact</h2>
+        <p>Pour toute question concernant vos données personnelles ou cette politique, vous pouvez nous joindre à :</p>
+        <address>
+            <strong>ATYPIQUE</strong><br />
+            <a href="mailto:atypique.studiocreatif@gmail.com">atypique.studiocreatif@gmail.com</a><br />
+        </address>
+    </section>
+
+        </div>
+       
+    </div>
+  </section>
+
+  <section class="p-5 bg-beigesable py-5" id="scrollcontact">
+    <div class="container">
+      <div class="row justify-content-center my-5">
+        <div class="col-md-5">
+          <h6>
+            Me contacter
+          </h6>
+          <h2 class="display-3">
+            Écrivez-moi !
+          </h2>
+          <p>
+            Ensemble, créons une identité professionnelle qui vous démarquera de la concurrence !
+          </p>
+        </div>
+
+
+
+        <div class="col-md-5">
+          <form action="contact.php" method="POST" id="contactForm">
+            <div class="mb-3">
+              <input type="name" class="form-control p-3 rounded-4" name="name" id="name" aria-describedby="nameHelpId"
+                placeholder="Votre nom" />
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control p-3 rounded-4" name="email" id="email" aria-describedby="emailHelpId"
+                placeholder="Votre mail" />
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control p-3 rounded-4" name="message" placeholder="Votre message" id="message" rows="3"></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-dark btn-lg text-uppercase rounded-4" id="btnenvoyer">
+                Envoyer
+              </button>
+            </div>
+          </form>
+        </div>
+
+      
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer" class="bg-bleunuit text-white py-5">
+    <div class="container-sm">
+      <div class="row g-md-5">
+        <div class="col-md-4">
+          <div class="info-box">
+            <img src="images/logo_footer.png" class="img-fluid">
+            <div class="social-links">
+                <svg class="instagram" width="50" height="50" style="cursor:pointer;" onclick="window.open('https://www.instagram.com/atypique.studiocreatif?igsh=NW1hNzJkdHNxNjRh', '_blank')">
+                    <use xlink:href="#instagram"></use>
+                </svg>
+                <svg class="facebook" id="iconemenu" width="50" height="50" style="cursor:pointer;" onclick="window.open('https://www.facebook.com/share/1BLuikcQAx/', '_blank')">
+                    <use xlink:href="#facebook"></use>
+                </svg>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-6">
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-decoration-none text-white" href="index.html">Accueil</a>
+                </li>
+                <li>
+                  <a class="text-decoration-none text-white" href="index.html">Qui suis-je ?</a>
+                </li>
+                <li>
+                  <a class="text-decoration-none text-white" href="index.html">Portfolio</a>
+                </li>
+                <li>
+                  <a class="text-decoration-none text-white" href="index.html">Mentions légales</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <p>
+            N'hésitez pas à me contacter, et établissons ensemble le futur de votre communication !
+          </p>
+          <h3>
+            <a href="mailto:contact@yourwebsite.com" class="text-white text-decoration-none">atypique.studiocreatif@gmail.com</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="js/jquery-1.11.0.min.js"></script> <!-- jquery file-->
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> <!--cdn link-->
+  <script src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/lightbox.min.js"></script>
+
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Empêche le rechargement de la page
+
+  const formData = new FormData(this);
+
+  fetch('contact.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    alert(data); // Affiche le message renvoyé par contact.php (ex : "Message envoyé avec succès.")
+    this.reset(); // Vide le formulaire
+  })
+  .catch(() => alert("Erreur lors de l'envoi du message."));
+});
+</script>
+</body>
+
+</html>
